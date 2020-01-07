@@ -8,25 +8,28 @@ public class WordOfNumber {
         private static final String[] numNames = {""," one"," two"," three"," four"," five"," six"," seven"," eight", " nine"," ten"," eleven",
                                                     " twelve"," thirteen"," fourteen"," fifteen", " sixteen"," seventeen"," eighteen"," nineteen"};
 
-    //        private WordOfNumber() {}
+    private static String convertLessThanOneThousand(int number) {
+        String soFar;
 
-        private static String convertLessThanOneThousand(int number) {
-            String soFar;
-
-            if (number % 100 < 20){
-                soFar = numNames[number % 100];
-                number /= 100;
-            }
-            else {
-                soFar = numNames[number % 10];
-                number /= 10;
-
-                soFar = tensNames[number % 10] + soFar;
-                number /= 10;
-            }
-            if (number == 0) return soFar;
-            return numNames[number] + " hundred and" + soFar;
+        if (number % 100 < 20){
+            soFar = numNames[number % 100];
+            number /= 100;
         }
+        else {
+            soFar = numNames[number % 10];
+            number /= 10;
+
+            soFar = tensNames[number % 10] + soFar;
+            number /= 10;
+        }
+        if (number == 0) return soFar;
+        //adding "and" for certain words
+           /* else if(number % 2 != 0){
+                 return numNames[number] + " hundred " + soFar;
+             }
+             return numNames[number] + " hundred and " + soFar;*/
+        return numNames[number] + " hundred and " + soFar;
+    }
 
 
         public static String convert(long number) {
@@ -96,8 +99,6 @@ public class WordOfNumber {
             String tradThousand;
             tradThousand = convertLessThanOneThousand(thousands);
             result =  result + tradThousand;
-
-            // remove extra spaces!
             return result.replaceAll("^\\s+", "").replaceAll("\\b\\s{2,}\\b", " ");
         }
     }
