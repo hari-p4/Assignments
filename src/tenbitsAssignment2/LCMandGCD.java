@@ -1,32 +1,26 @@
 package com.company.tenbitsAssignment2;
 
-public class LCMandGCD{
+public class Test {
+    public static void Number(int a , int b){
+        int gcd = 0, lcm, deno, nume, rem;
 
-    public static void Find(int a, int b)
-    {
-        int gcd, lcm, remainder, numerator, denominator;
-        if (a > b)
-        {
-            numerator = a;
-            denominator = b;
+        if(a < b){
+            nume = b;
+            deno = a;
         }
-        else
-        {
-            numerator = b;
-            denominator = a;
+        else{
+            nume = a;
+            deno = b;
         }
-        remainder = numerator % denominator;
-        while(remainder != 0)
-        {
-            numerator = denominator;
-            denominator = remainder;
-            remainder = numerator%denominator;
+        if (nume % deno == 0){
+            gcd = deno;
         }
-        gcd = denominator;
-        lcm = a * b / gcd;
-        System.out.println("GCD of "+a+" and "+b+" = "+gcd);
-        System.out.println("LCM of "+a+" and "+b+" = "+lcm);
+        else {
+            rem = nume % deno;
+            gcd = rem;
+        }
+        lcm = (a * b) / gcd;
+        System.out.println("LCM : " +lcm+ " GCD : "+gcd );
     }
 
 }
-
