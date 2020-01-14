@@ -22,18 +22,21 @@ public class ConsequentAlpha {
         map.put('P', 14);
         map.put('Q', 15);
         map.put('R', 16);
-        //AKB
+        //FJK
+        int differnece = 0;
+
         for(int i = 0; i <= s.length(); i++){
 
-            if(map.get(s.charAt(i)) - map.get(s.charAt(i + 1))  != 0) {
+            if(map.get(s.charAt(i)) - map.get(s.charAt(i + 1))  < 0) {
 
-                    System.out.println("There is difference");
-            }
-            else{
-                System.out.println("There is NO difference Found");
-            }
+                differnece =  map.get(s.charAt(i)) - map.get(s.charAt(i + 1));
+                differnece = differnece * (-1);
 
+                System.out.println("There least difference is " + differnece);
+
+            }
         }
+
     }
 
 }
