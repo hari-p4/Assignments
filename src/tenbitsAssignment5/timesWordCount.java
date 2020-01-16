@@ -1,4 +1,5 @@
-package com.company.tenbitsAssignment5;
+package com.compa
+ny.tenbitsAssignment5;
 
 public class timesWordCount {
     public static void WordCount(String sentence, String findThis){
