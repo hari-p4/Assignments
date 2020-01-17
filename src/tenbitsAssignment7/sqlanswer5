@@ -1,0 +1,3 @@
+
+SELECT empname, ROUND(AVG(salary) ,0) AS "Nearest Empsalary"
+FROM employee;

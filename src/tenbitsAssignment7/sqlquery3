@@ -1,0 +1,17 @@
+ALTER TABLE `vehicledb`.`employee`
+ADD CONSTRAINT `managerid`
+  FOREIGN KEY (`managerid`)
+  REFERENCES `vehicledb`.`manager` (`managerid`)
+  ON DELETE CASCADE
+  ON UPDATE NO ACTION;
+
+
+ALTER TABLE `vehicledb`.`employee`
+ADD INDEX `departmentid_idx` (`departmentid` ASC) VISIBLE;
+;
+ALTER TABLE `vehicledb`.`employee`
+ADD CONSTRAINT `departmentid`
+  FOREIGN KEY (`departmentid`)
+  REFERENCES `vehicledb`.`department` (`departmentid`)
+  ON DELETE CASCADE
+  ON UPDATE NO ACTION;

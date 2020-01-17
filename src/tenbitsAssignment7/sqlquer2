@@ -1,0 +1,10 @@
+CREATE TABLE `vehicledb`.`manager` (
+  `managerid` INT NOT NULL,
+  `managername` VARCHAR(45) NULL,
+  PRIMARY KEY (`managerid`));
+
+
+CREATE TABLE `vehicledb`.`department` (
+  `departmentid` INT NOT NULL,
+  `departmentname` VARCHAR(45) NULL,
+  PRIMARY KEY (`departmentid`));

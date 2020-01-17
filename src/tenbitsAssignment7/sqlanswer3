@@ -1,0 +1,3 @@
+SELECT * FROM vehicledb.employee
+WHERE salary <
+ALL(SELECT avg(salary)FROM employee GROUP BY departmentid);

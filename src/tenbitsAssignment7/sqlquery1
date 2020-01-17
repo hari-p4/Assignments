@@ -1,0 +1,7 @@
+CREATE TABLE `vehicledb`.`employee` (
+  `empid` INT NOT NULL,
+  `empname` VARCHAR(45) NULL,
+  `salary` VARCHAR(45) NULL,
+  `department` VARCHAR(45) NULL,
+  `managerid` VARCHAR(45) NULL,
+  PRIMARY KEY (`empid`));

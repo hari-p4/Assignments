@@ -1,0 +1,3 @@
+SELECT empname
+FROM employee e
+ORDER BY e.empname ASC;
