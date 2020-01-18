@@ -1,0 +1,3 @@
+SELECT departmentid, MAX(salary) FROM employee
+where departmentid = 2
+GROUP BY departmentid;

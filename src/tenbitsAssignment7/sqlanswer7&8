@@ -1,0 +1,6 @@
+select managername from manager join employee
+where employee.managerid != manager.managerid;
+
+
+select employee.empname from employee
+where employee.managerid is null;
