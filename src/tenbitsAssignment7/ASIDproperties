@@ -1,0 +1,7 @@
+Atomicity - When a query or a transaction takes place once at a time.
+
+Consistency - All the transaction must perform consistently.
+
+Isolation - More than one transaction occurs independently
+
+Durability - After altering query and result, the transaction should happen durable even if there was a failure which should not affect current transactio
