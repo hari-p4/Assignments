@@ -1,3 +1,4 @@
- select distinct(salary) FROM employee
- ORDER BY Salary asc
- LIMIT 1 offset 2;g
+
+ select distinct(salary) from employee
+ order by Salary asc
+ limit 1 offset 2;
